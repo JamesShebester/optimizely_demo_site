@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary */
+  --color-lf-green: #abff44;
+  --color-grass: #7ddd3d;
+  --color-good-to-go: #3ab533;
+  --color-neutral-1: #ffffff;
+  --color-neutral-3: #e4f0da;
+
+  /* Secondary */
+  --color-light-blue: #91dbda;
+  --color-dark-fir: #08251a;
+
+  /* Tertiary */
+  --color-dark-blue: #007b79;
+  --color-light-fir: #197050;
+  --color-mid-fir: #0d3a29;
+  --color-light-pink: #ff99b6;
+  --color-dark-pink: #8f4764;
+  --color-neutral-2: #eff6e9;
+  --color-neutral-4: #d8e4cb;
+  --color-neutral-5: #c3ceaf;
+  --color-neutral-6: #a1ac8d;
+
+  --background: var(--color-neutral-1);
+  --foreground: var(--color-dark-fir);
+  --radius-brand: 32px;
 }
 
 @theme inline {
+  --color-lf-green: var(--color-lf-green);
+  --color-grass: var(--color-grass);
+  --color-good-to-go: var(--color-good-to-go);
+  --color-neutral-1: var(--color-neutral-1);
+  --color-neutral-2: var(--color-neutral-2);
+  --color-neutral-3: var(--color-neutral-3);
+  --color-neutral-4: var(--color-neutral-4);
+  --color-neutral-5: var(--color-neutral-5);
+  --color-neutral-6: var(--color-neutral-6);
+  --color-light-blue: var(--color-light-blue);
+  --color-dark-fir: var(--color-dark-fir);
+  --color-dark-blue: var(--color-dark-blue);
+  --color-light-fir: var(--color-light-fir);
+  --color-mid-fir: var(--color-mid-fir);
+  --color-light-pink: var(--color-light-pink);
+  --color-dark-pink: var(--color-dark-pink);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-headline: var(--font-roboto-condensed);
+  --font-sans: var(--font-roboto);
+  --font-mono: var(--font-roboto-mono);
+
+  --radius-brand: var(--radius-brand);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-headline), Arial, Helvetica, sans-serif;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+}
+
+/* Optimizely "pillow" corner treatment: rounded + smoothed */
+.brand-corners {
+  border-radius: var(--radius-brand);
+}
+
+@supports (corner-shape: squircle) {
+  .brand-corners {
+    corner-shape: squircle;
+  }
 }

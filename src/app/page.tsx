@@ -1,69 +1,104 @@
-import Image from "next/image";
+import Section from "@/components/ui/section";
+import Eyebrow from "@/components/ui/eyebrow";
+import Button from "@/components/ui/button";
+import Card from "@/components/ui/card";
+import Icon from "@/components/ui/icon";
+
+const features = [
+  {
+    icon: "Experimentation",
+    title: "Experimentation",
+    body: "Test bold ideas and ship the ones that work, backed by data instead of debate.",
+  },
+  {
+    icon: "Content Management",
+    title: "Content management",
+    body: "Give every team the tools to build, personalize, and publish without waiting on IT.",
+  },
+  {
+    icon: "Commerce",
+    title: "Commerce",
+    body: "Connect content and commerce so every experience feels like one product, not three.",
+  },
+];
+
+const stats = [
+  { value: "9,000+", label: "brands liberated" },
+  { value: "1.2B", label: "experiments run" },
+  { value: "35%", label: "average lift reported" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <Section bg="neutral" className="pt-24 pb-24">
+        <Eyebrow>Optimizely</Eyebrow>
+        <h1 className="text-5xl md:text-6xl font-black max-w-3xl">
+          Marketing liberation starts here
+        </h1>
+        <p className="mt-6 max-w-xl text-lg text-mid-fir">
+          One platform to experiment, build, and sell — so your team can stop
+          fighting the process and get back to making great work.
+        </p>
+        <div className="mt-10 flex gap-4">
+          <Button href="/product" variant="primary">
+            Explore the product
+          </Button>
+          <Button href="/customer-stories" variant="outline">
+            See customer stories
+          </Button>
+        </div>
+      </Section>
+
+      <Section bg="white">
+        <Eyebrow>What you get</Eyebrow>
+        <h2 className="text-3xl md:text-4xl font-black max-w-2xl">
+          Everything an experience-maker needs, in one place
+        </h2>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {features.map((feature) => (
+            <Card key={feature.title} tone="neutral">
+              <Icon name={feature.icon} tone="dark" size={36} />
+              <h3 className="text-xl font-bold mt-4 mb-3">{feature.title}</h3>
+              <p className="text-sm text-mid-fir">{feature.body}</p>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      <Section image="/brand/backgrounds/landscape-mountains.webp" className="py-32">
+        <Card tone="dark" className="max-w-md">
+          <Eyebrow>The lands of the liberated</Eyebrow>
+          <p className="text-2xl font-bold">
+            35% average lift, without the guesswork.
           </p>
+        </Card>
+      </Section>
+
+      <Section bg="dark">
+        <Eyebrow>The world leader in experimentation</Eyebrow>
+        <div className="grid gap-8 md:grid-cols-3">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <p className="text-4xl md:text-5xl font-black text-lf-green">
+                {stat.value}
+              </p>
+              <p className="mt-2 text-neutral-4">{stat.label}</p>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Section>
+
+      <Section bg="green">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <h2 className="text-3xl md:text-4xl font-black max-w-xl">
+            Ready to break the cycle?
+          </h2>
+          <Button href="/product" variant="primary">
+            Get a demo
+          </Button>
         </div>
-      </main>
-    </div>
+      </Section>
+    </>
   );
 }
