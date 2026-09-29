@@ -15,11 +15,13 @@ const baseClasses =
 type ButtonProps = {
   variant?: Variant;
   href?: string;
-} & ComponentPropsWithoutRef<"button">;
+  onClick?: () => void;
+} & Omit<ComponentPropsWithoutRef<"button">, "onClick">;
 
 export default function Button({
   variant = "primary",
   href,
+  onClick,
   className = "",
   children,
   ...props
@@ -30,14 +32,14 @@ export default function Button({
     return (
       // Prefetch off: this ships as a static export with no Next server
       // behind it, so there's no RSC endpoint for prefetch to hit.
-      <Link href={href} prefetch={false} className={classes}>
+      <Link href={href} prefetch={false} onClick={onClick} className={classes}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button className={classes} {...props}>
+    <button className={classes} onClick={onClick} {...props}>
       {children}
     </button>
   );

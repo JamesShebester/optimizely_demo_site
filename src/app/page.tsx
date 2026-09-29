@@ -3,6 +3,7 @@ import Eyebrow from "@/components/ui/eyebrow";
 import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import HomeHero from "@/components/home-hero";
 
 const features = [
   {
@@ -33,21 +34,7 @@ export default function Home() {
     <>
       <Section bg="neutral" className="pt-24 pb-24">
         <Eyebrow>Optimizely</Eyebrow>
-        <h1 className="text-5xl md:text-6xl font-black max-w-3xl">
-          Marketing liberation starts here
-        </h1>
-        <p className="mt-6 max-w-xl text-lg text-mid-fir">
-          One platform to experiment, build, and sell — so your team can stop
-          fighting the process and get back to making great work.
-        </p>
-        <div className="mt-10 flex gap-4">
-          <Button href="/product" variant="primary">
-            Explore the product
-          </Button>
-          <Button href="/customer-stories" variant="outline">
-            See customer stories
-          </Button>
-        </div>
+        <HomeHero />
       </Section>
 
       <Section bg="white">
