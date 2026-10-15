@@ -22,7 +22,7 @@ export default function Footer() {
         <div>
           <Logo />
           <p className="mt-4 text-sm text-neutral-4 max-w-xs">
-            One platform for experience-makers to get stuff done, faster.
+            One platform for retail teams to get stuff done, faster.
           </p>
         </div>
         {columns.map((col) => (

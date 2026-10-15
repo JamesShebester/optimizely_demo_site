@@ -9,24 +9,24 @@ const features = [
   {
     icon: "Experimentation",
     title: "Experimentation",
-    body: "Test bold ideas and ship the ones that work, backed by data instead of debate.",
+    body: "Test every merchandising idea — from homepage banners to checkout flows — and only ship the ones that lift conversion.",
   },
   {
     icon: "Content Management",
     title: "Content management",
-    body: "Give every team the tools to build, personalize, and publish without waiting on IT.",
+    body: "Give merchandising and marketing teams the tools to build, personalize, and publish collections without waiting on IT.",
   },
   {
     icon: "Commerce",
     title: "Commerce",
-    body: "Connect content and commerce so every experience feels like one product, not three.",
+    body: "Connect content and commerce so browsing, bundles, and checkout feel like one seamless shopping experience.",
   },
 ];
 
 const stats = [
-  { value: "9,000+", label: "brands liberated" },
-  { value: "1.2B", label: "experiments run" },
-  { value: "35%", label: "average lift reported" },
+  { value: "2,400+", label: "retailers growing with Optimizely" },
+  { value: "1.2B", label: "shopper experiments run" },
+  { value: "28%", label: "average conversion lift" },
 ];
 
 export default function Home() {
@@ -55,9 +55,9 @@ export default function Home() {
 
       <Section image="/brand/backgrounds/landscape-mountains.webp" className="py-32">
         <Card tone="dark" className="max-w-md">
-          <Eyebrow>The lands of the liberated</Eyebrow>
+          <Eyebrow>Built for the busiest shopping days</Eyebrow>
           <p className="text-2xl font-bold">
-            35% average lift, without the guesswork.
+            28% average conversion lift, without the guesswork.
           </p>
         </Card>
       </Section>
@@ -79,7 +79,7 @@ export default function Home() {
       <Section bg="green">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <h2 className="text-3xl md:text-4xl font-black max-w-xl">
-            Ready to break the cycle?
+            Ready to turn browsers into buyers?
           </h2>
           <Button href="/product" variant="primary">
             Get a demo

@@ -8,10 +8,10 @@ import Personalize from "@/components/personalize";
 // dashboard, then run an experiment or targeted rule that overrides them
 // per audience/variation.
 const HOME_HERO_DEFAULTS = {
-  headline: "Marketing liberation starts here",
+  headline: "Turn more browsers into buyers",
   subheadline:
-    "One platform to experiment, build, and sell — so your team can stop fighting the process and get back to making great work.",
-  ctaLabel: "Explore the product",
+    "One platform to experiment, merchandise, and sell — so your retail team can stop fighting the stack and get back to growing revenue.",
+  ctaLabel: "Explore the platform",
 };
 
 export default function HomeHero() {

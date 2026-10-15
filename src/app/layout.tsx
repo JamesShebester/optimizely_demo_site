@@ -25,9 +25,9 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Optimizely | Marketing liberation",
+  title: "Optimizely | Retail, reimagined",
   description:
-    "Demo site styled to Optimizely brand guidelines: experimentation, content, and commerce in one platform.",
+    "Demo site styled to Optimizely brand guidelines: experimentation, content, and commerce for retail teams.",
 };
 
 const webExperimentationProjectId =

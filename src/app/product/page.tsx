@@ -5,11 +5,11 @@ import Card from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 
 const steps = [
-  { icon: "Analytics", number: "01", title: "Set a goal", body: "Pick the metric that matters and let the platform track it end to end." },
-  { icon: "Visual Editor", number: "02", title: "Build a variation", body: "No-code visual editor or full code control — your call." },
-  { icon: "Targeting", number: "03", title: "Target your audience", body: "Layer in segments, flags, and rollout rules without a ticket." },
-  { icon: "Rollout", number: "04", title: "Ship with confidence", body: "Stats engine tells you when a result is real, not noise." },
-  { icon: "Stats Engine", number: "05", title: "Learn and repeat", body: "Every test feeds the next one, so the platform gets smarter with you." },
+  { icon: "Analytics", number: "01", title: "Set a goal", body: "Pick the metric that matters — conversion, AOV, cart completion — and let the platform track it end to end." },
+  { icon: "Visual Editor", number: "02", title: "Build a variation", body: "No-code visual editor or full code control for your PDPs and checkout — your call." },
+  { icon: "Targeting", number: "03", title: "Target your audience", body: "Layer in shopper segments, loyalty tiers, and merchandising rules without a ticket." },
+  { icon: "Rollout", number: "04", title: "Ship with confidence", body: "Stats engine tells you when a lift in conversion is real, not noise." },
+  { icon: "Stats Engine", number: "05", title: "Learn and repeat", body: "Every test feeds the next one, so your storefront gets smarter every season." },
 ];
 
 const galleryIcons = ["Flag", "Toggle", "AI", "Personalization"];
@@ -20,7 +20,7 @@ export default function ProductPage() {
       <Section bg="neutral" className="pt-24 pb-20">
         <Eyebrow>Product</Eyebrow>
         <h1 className="text-5xl font-black max-w-2xl">
-          Built for teams who'd rather ship than argue
+          Built for retail teams who'd rather ship than argue
         </h1>
         <p className="mt-6 max-w-xl text-lg text-mid-fir">
           This page is the starting point for product-specific components —
@@ -84,7 +84,7 @@ export default function ProductPage() {
           <p className="text-sm text-neutral-4">
             The icon cards above pull straight from the brand icon library
             (see /public/icons) — swap this card for whatever product
-            component comes next (comparison table, pricing tiers,
+            component comes next (size & fit guide, loyalty tiers,
             interactive widget, etc.).
           </p>
         </Card>

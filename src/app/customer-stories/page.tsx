@@ -2,27 +2,27 @@ import Section from "@/components/ui/section";
 import Eyebrow from "@/components/ui/eyebrow";
 import Card from "@/components/ui/card";
 
-const logos = ["Acme Co.", "Northwind", "Globex", "Initech", "Umbrella", "Stark Retail"];
+const logos = ["Acme Apparel", "Northwind Outfitters", "Globex Goods", "Initech Home & Living", "Umbrella Supply Co.", "Stark Retail"];
 
 const quotes = [
   {
     quote:
-      "We used to spend weeks debating what to launch. Now we launch it, test it, and know the answer in days.",
+      "We used to spend weeks debating what to launch on the storefront. Now we launch it, test it, and know the answer in days.",
     name: "Jordan Lee",
-    title: "VP Marketing, Acme Co.",
+    title: "VP Ecommerce, Acme Apparel",
   },
   {
     quote:
-      "The platform gave every team the same playbook — no more three tools duct-taped together.",
+      "The platform gave merchandising, marketing, and product the same playbook — no more three tools duct-taped together.",
     name: "Priya Shah",
-    title: "Head of Growth, Northwind",
+    title: "Head of Digital, Northwind Outfitters",
   },
 ];
 
 const stats = [
   { value: "42%", label: "faster time to launch" },
   { value: "3x", label: "more experiments per quarter" },
-  { value: "98%", label: "customer satisfaction" },
+  { value: "31%", label: "lift in average order value" },
 ];
 
 export default function CustomerStoriesPage() {
@@ -34,7 +34,7 @@ export default function CustomerStoriesPage() {
           Real teams, real results
         </h1>
         <p className="mt-6 max-w-xl text-lg text-mid-fir">
-          The brands that ditched the guesswork and started shipping with
+          The retailers that ditched the guesswork and started shipping with
           confidence.
         </p>
       </Section>
@@ -68,11 +68,12 @@ export default function CustomerStoriesPage() {
       <Section image="/brand/backgrounds/landscape-road.webp" className="py-32 flex justify-end">
         <Card tone="dark" className="max-w-lg ml-auto">
           <p className="text-xl font-medium mb-6">
-            &ldquo;We stopped shipping guesses and started shipping evidence
-            &mdash; every team moves faster because of it.&rdquo;
+            &ldquo;We stopped shipping guesses on our storefront and started
+            shipping evidence &mdash; every team moves faster because of
+            it.&rdquo;
           </p>
           <p className="text-sm font-bold">Mateo Alvarez</p>
-          <p className="text-sm text-neutral-4">CTO, Globex</p>
+          <p className="text-sm text-neutral-4">CTO, Globex Goods</p>
         </Card>
       </Section>
 
