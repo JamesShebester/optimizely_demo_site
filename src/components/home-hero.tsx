@@ -8,10 +8,10 @@ import Personalize from "@/components/personalize";
 // dashboard, then run an experiment or targeted rule that overrides them
 // per audience/variation.
 const HOME_HERO_DEFAULTS = {
-  headline: "Turn more browsers into buyers",
+  headline: "Your new everyday wardrobe",
   subheadline:
-    "One platform to experiment, merchandise, and sell — so your retail team can stop fighting the stack and get back to growing revenue.",
-  ctaLabel: "Explore the platform",
+    "Thoughtfully made basics, knits, and outerwear — cut for movement, built to last. Free shipping and easy 60-day returns on every order.",
+  ctaLabel: "Shop New Arrivals",
 };
 
 export default function HomeHero() {
@@ -34,7 +34,7 @@ export default function HomeHero() {
               {vars.ctaLabel}
             </Button>
             <Button href="/customer-stories" variant="outline">
-              See customer stories
+              Read Reviews
             </Button>
           </div>
         </>

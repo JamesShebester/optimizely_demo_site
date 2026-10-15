@@ -2,52 +2,52 @@ import Section from "@/components/ui/section";
 import Eyebrow from "@/components/ui/eyebrow";
 import Card from "@/components/ui/card";
 
-const logos = ["Acme Apparel", "Northwind Outfitters", "Globex Goods", "Initech Home & Living", "Umbrella Supply Co.", "Stark Retail"];
+const press = ["Vogue", "GQ", "Elle", "Refinery29", "Highsnobiety", "The Strategist"];
 
 const quotes = [
   {
     quote:
-      "We used to spend weeks debating what to launch on the storefront. Now we launch it, test it, and know the answer in days.",
-    name: "Jordan Lee",
-    title: "VP Ecommerce, Acme Apparel",
+      "The fit is perfect and the fabric feels so much better than I expected. Already ordering it in two more colors.",
+    name: "Jordan L.",
+    title: "★★★★★ Verified Buyer",
   },
   {
     quote:
-      "The platform gave merchandising, marketing, and product the same playbook — no more three tools duct-taped together.",
-    name: "Priya Shah",
-    title: "Head of Digital, Northwind Outfitters",
+      "Returns were so easy when a size didn't work out — real customer service, not just a bot.",
+    name: "Priya S.",
+    title: "★★★★★ Verified Buyer",
   },
 ];
 
 const stats = [
-  { value: "42%", label: "faster time to launch" },
-  { value: "3x", label: "more experiments per quarter" },
-  { value: "31%", label: "lift in average order value" },
+  { value: "4.8/5", label: "average rating across 12,000+ reviews" },
+  { value: "92%", label: "would recommend to a friend" },
+  { value: "60-day", label: "free returns, no questions asked" },
 ];
 
 export default function CustomerStoriesPage() {
   return (
     <>
       <Section bg="neutral" className="pt-24 pb-20">
-        <Eyebrow>Customer stories</Eyebrow>
+        <Eyebrow>Reviews</Eyebrow>
         <h1 className="text-5xl font-black max-w-2xl">
-          Real teams, real results
+          Loved by thousands of shoppers
         </h1>
         <p className="mt-6 max-w-xl text-lg text-mid-fir">
-          The retailers that ditched the guesswork and started shipping with
-          confidence.
+          Don&apos;t just take our word for it — here&apos;s what customers
+          are saying.
         </p>
       </Section>
 
       <Section bg="white">
-        <Eyebrow>Jump on the brandwagon</Eyebrow>
+        <Eyebrow>As seen in</Eyebrow>
         <div className="flex flex-wrap gap-x-10 gap-y-6 items-center">
-          {logos.map((logo) => (
+          {press.map((name) => (
             <span
-              key={logo}
+              key={name}
               className="font-headline text-xl font-bold text-neutral-6"
             >
-              {logo}
+              {name}
             </span>
           ))}
         </div>
@@ -68,17 +68,16 @@ export default function CustomerStoriesPage() {
       <Section image="/brand/backgrounds/landscape-road.webp" className="py-32 flex justify-end">
         <Card tone="dark" className="max-w-lg ml-auto">
           <p className="text-xl font-medium mb-6">
-            &ldquo;We stopped shipping guesses on our storefront and started
-            shipping evidence &mdash; every team moves faster because of
-            it.&rdquo;
+            &ldquo;I&apos;ve bought three jackets now and they all still
+            look brand new. Worth every penny.&rdquo;
           </p>
-          <p className="text-sm font-bold">Mateo Alvarez</p>
-          <p className="text-sm text-neutral-4">CTO, Globex Goods</p>
+          <p className="text-sm font-bold">Mateo A.</p>
+          <p className="text-sm text-neutral-4">★★★★★ Verified Buyer</p>
         </Card>
       </Section>
 
       <Section bg="dark">
-        <Eyebrow>The world leader in experimentation</Eyebrow>
+        <Eyebrow>Why shoppers keep coming back</Eyebrow>
         <div className="grid gap-8 md:grid-cols-3">
           {stats.map((stat) => (
             <div key={stat.label}>

@@ -5,33 +5,38 @@ import Card from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 
 const steps = [
-  { icon: "Analytics", number: "01", title: "Set a goal", body: "Pick the metric that matters — conversion, AOV, cart completion — and let the platform track it end to end." },
-  { icon: "Visual Editor", number: "02", title: "Build a variation", body: "No-code visual editor or full code control for your PDPs and checkout — your call." },
-  { icon: "Targeting", number: "03", title: "Target your audience", body: "Layer in shopper segments, loyalty tiers, and merchandising rules without a ticket." },
-  { icon: "Rollout", number: "04", title: "Ship with confidence", body: "Stats engine tells you when a lift in conversion is real, not noise." },
-  { icon: "Stats Engine", number: "05", title: "Learn and repeat", body: "Every test feeds the next one, so your storefront gets smarter every season." },
+  { icon: "Search", number: "01", title: "Browse the collection", body: "Explore new arrivals, bestsellers, and seasonal edits curated for you." },
+  { icon: "Best Practice", number: "02", title: "Find your fit", body: "Size guides and fit notes on every product page, so what you order is what works." },
+  { icon: "Recommendation", number: "03", title: "Get personalized picks", body: "Recommendations and offers tailored to your style and past purchases." },
+  { icon: "Guaranteed", number: "04", title: "Checkout with confidence", body: "Secure payment, saved addresses, and free shipping over $75." },
+  { icon: "Check", number: "05", title: "Track & return easily", body: "Real-time order tracking and 60-day free returns if it's not quite right." },
 ];
 
-const galleryIcons = ["Flag", "Toggle", "AI", "Personalization"];
+const categories = [
+  { icon: "Search", label: "New Arrivals" },
+  { icon: "Heart", label: "Favorites" },
+  { icon: "Recommendation", label: "Recommended for You" },
+  { icon: "Premium", label: "Best Sellers" },
+];
 
 export default function ProductPage() {
   return (
     <>
       <Section bg="neutral" className="pt-24 pb-20">
-        <Eyebrow>Product</Eyebrow>
+        <Eyebrow>Shop</Eyebrow>
         <h1 className="text-5xl font-black max-w-2xl">
-          Built for retail teams who'd rather ship than argue
+          New season, new favorites
         </h1>
         <p className="mt-6 max-w-xl text-lg text-mid-fir">
-          This page is the starting point for product-specific components —
-          add feature callouts, device mockups, or interactive demos below.
+          Cozy knits, everyday denim, and outerwear built for however your
+          week unfolds.
         </p>
       </Section>
 
       <Section bg="white">
         <Eyebrow>How it works</Eyebrow>
         <h2 className="text-3xl md:text-4xl font-black max-w-2xl">
-          Five steps from idea to shipped experiment
+          From browsing to your doorstep
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-5">
           {steps.map((step) => (
@@ -48,44 +53,41 @@ export default function ProductPage() {
       <Section bg="neutral">
         <div className="grid gap-10 md:grid-cols-2 items-center">
           <div>
-            <Eyebrow>Related product</Eyebrow>
+            <Eyebrow>Complete the look</Eyebrow>
             <h2 className="text-3xl font-black mb-4">
-              Pair it with Content Management
+              Pair it with our best-selling basics
             </h2>
             <p className="text-mid-fir mb-6">
-              Swap this block for a real feature callout — headline, short
-              body, and a device or product screenshot placeholder.
+              Layer, mix, and match — our essentials collection is designed
+              to work with everything else in your closet.
             </p>
-            <Button href="/customer-stories" variant="outline">
-              See it in action
+            <Button href="/" variant="outline">
+              Shop Essentials
             </Button>
           </div>
           <Card tone="dark" className="aspect-video flex items-center justify-center">
             <p className="font-mono text-sm text-neutral-4">
-              [ device mockup placeholder ]
+              [ product photo placeholder ]
             </p>
           </Card>
         </div>
       </Section>
 
-      {/* Add new product components below this line. */}
       <Section image="/brand/backgrounds/opal-texture-green.webp">
-        <Eyebrow>Component gallery</Eyebrow>
-        <h2 className="text-3xl font-black mb-6">Drop new components here</h2>
+        <Eyebrow>Shop by category</Eyebrow>
+        <h2 className="text-3xl font-black mb-6">Find your next favorite</h2>
         <div className="grid gap-6 md:grid-cols-4 mb-6">
-          {galleryIcons.map((name) => (
-            <Card key={name} tone="neutral" className="flex flex-col items-center text-center gap-3">
-              <Icon name={name} tone="dark" size={36} />
-              <p className="text-sm font-medium">{name}</p>
+          {categories.map((category) => (
+            <Card key={category.label} tone="neutral" className="flex flex-col items-center text-center gap-3">
+              <Icon name={category.icon} tone="dark" size={36} />
+              <p className="text-sm font-medium">{category.label}</p>
             </Card>
           ))}
         </div>
         <Card tone="dark" className="border border-dashed border-neutral-6">
           <p className="text-sm text-neutral-4">
-            The icon cards above pull straight from the brand icon library
-            (see /public/icons) — swap this card for whatever product
-            component comes next (size & fit guide, loyalty tiers,
-            interactive widget, etc.).
+            Free shipping on orders over $75, easy 60-day returns, and
+            rewards every time you shop.
           </p>
         </Card>
       </Section>

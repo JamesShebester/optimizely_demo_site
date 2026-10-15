@@ -25,9 +25,9 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Optimizely | Retail, reimagined",
+  title: "Optimizely | New season, new favorites",
   description:
-    "Demo site styled to Optimizely brand guidelines: experimentation, content, and commerce for retail teams.",
+    "Thoughtfully made apparel and everyday essentials — free shipping over $75 and easy 60-day returns.",
 };
 
 const webExperimentationProjectId =

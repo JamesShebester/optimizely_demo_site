@@ -7,40 +7,40 @@ import HomeHero from "@/components/home-hero";
 
 const features = [
   {
-    icon: "Experimentation",
-    title: "Experimentation",
-    body: "Test every merchandising idea — from homepage banners to checkout flows — and only ship the ones that lift conversion.",
+    icon: "Guaranteed",
+    title: "Free shipping & returns",
+    body: "Free shipping on orders over $75, plus 60 days to return anything that's not quite right.",
   },
   {
-    icon: "Content Management",
-    title: "Content management",
-    body: "Give merchandising and marketing teams the tools to build, personalize, and publish collections without waiting on IT.",
+    icon: "Premium",
+    title: "Made to last",
+    body: "Durable fabrics and construction, tested for real life — not just the runway.",
   },
   {
-    icon: "Commerce",
-    title: "Commerce",
-    body: "Connect content and commerce so browsing, bundles, and checkout feel like one seamless shopping experience.",
+    icon: "Heart",
+    title: "Loved by customers",
+    body: "Rated 4.8 stars by thousands of shoppers who keep coming back for more.",
   },
 ];
 
 const stats = [
-  { value: "2,400+", label: "retailers growing with Optimizely" },
-  { value: "1.2B", label: "shopper experiments run" },
-  { value: "28%", label: "average conversion lift" },
+  { value: "50,000+", label: "happy customers" },
+  { value: "4.8★", label: "average rating" },
+  { value: "60-day", label: "free returns" },
 ];
 
 export default function Home() {
   return (
     <>
       <Section bg="neutral" className="pt-24 pb-24">
-        <Eyebrow>Optimizely</Eyebrow>
+        <Eyebrow>New Season</Eyebrow>
         <HomeHero />
       </Section>
 
       <Section bg="white">
-        <Eyebrow>What you get</Eyebrow>
+        <Eyebrow>Why shop with us</Eyebrow>
         <h2 className="text-3xl md:text-4xl font-black max-w-2xl">
-          Everything an experience-maker needs, in one place
+          Everything you need for effortless style
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {features.map((feature) => (
@@ -55,15 +55,15 @@ export default function Home() {
 
       <Section image="/brand/backgrounds/landscape-mountains.webp" className="py-32">
         <Card tone="dark" className="max-w-md">
-          <Eyebrow>Built for the busiest shopping days</Eyebrow>
+          <Eyebrow>Built for wherever you're headed</Eyebrow>
           <p className="text-2xl font-bold">
-            28% average conversion lift, without the guesswork.
+            Layers that keep up, from the trailhead to the train platform.
           </p>
         </Card>
       </Section>
 
       <Section bg="dark">
-        <Eyebrow>The world leader in experimentation</Eyebrow>
+        <Eyebrow>Loved by shoppers everywhere</Eyebrow>
         <div className="grid gap-8 md:grid-cols-3">
           {stats.map((stat) => (
             <div key={stat.label}>
@@ -79,10 +79,10 @@ export default function Home() {
       <Section bg="green">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <h2 className="text-3xl md:text-4xl font-black max-w-xl">
-            Ready to turn browsers into buyers?
+            Ready to refresh your wardrobe?
           </h2>
           <Button href="/product" variant="primary">
-            Get a demo
+            Shop Now
           </Button>
         </div>
       </Section>

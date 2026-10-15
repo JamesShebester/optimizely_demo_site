@@ -2,16 +2,16 @@ import Logo from "@/components/logo";
 
 const columns = [
   {
-    title: "Product",
-    links: ["Experimentation", "Content management", "Commerce", "Data platform"],
+    title: "Shop",
+    links: ["New Arrivals", "Women's", "Men's", "Accessories"],
   },
   {
     title: "Company",
-    links: ["About", "Customer stories", "Careers"],
+    links: ["About Us", "Reviews", "Careers"],
   },
   {
-    title: "Resources",
-    links: ["Blog", "Docs", "Support"],
+    title: "Help",
+    links: ["Size Guide", "Shipping & Returns", "Support"],
   },
 ];
 
@@ -22,7 +22,7 @@ export default function Footer() {
         <div>
           <Logo />
           <p className="mt-4 text-sm text-neutral-4 max-w-xs">
-            One platform for retail teams to get stuff done, faster.
+            Everyday essentials, made to last. Free shipping on orders over $75.
           </p>
         </div>
         {columns.map((col) => (

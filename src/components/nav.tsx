@@ -3,8 +3,8 @@ import Button from "@/components/ui/button";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/product", label: "Product" },
-  { href: "/customer-stories", label: "Customer stories" },
+  { href: "/product", label: "Shop" },
+  { href: "/customer-stories", label: "Reviews" },
 ];
 
 export default function Nav() {
@@ -24,7 +24,7 @@ export default function Nav() {
           ))}
         </nav>
         <Button href="/product" variant="secondary" className="text-sm px-5 py-2.5">
-          Get a demo
+          Shop Now
         </Button>
       </div>
     </header>
